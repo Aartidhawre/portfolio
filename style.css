@@ -1,0 +1,119 @@
+:root {
+  --bg:#0f1724;
+  --card:#0b1220;
+  --muted:#94a3b8;
+  --accent:#7c3aed;
+  --radius:14px;
+  --maxw:1100px;
+  font-family: Inter, system-ui, 'Segoe UI', Arial;
+}
+
+* { box-sizing: border-box; }
+html, body { height: 100%; margin: 0; background: linear-gradient(180deg, var(--bg), #071027); color: #fff; }
+.container { max-width: var(--maxw); margin: 0 auto; padding: 28px; }
+
+header { position: fixed; left:0; right:0; top:0; backdrop-filter: blur(6px); background: linear-gradient(180deg, rgba(255,255,255,0.02), transparent); border-bottom:1px solid rgba(255,255,255,0.03); z-index:40; }
+nav { display:flex; align-items:center; justify-content:space-between; gap:16px; padding:12px 18px; }
+.brand { font-weight:700; }
+.nav-links { display:flex; gap:14px; align-items:center; }
+.btn { padding:8px 12px; border-radius:10px; background:linear-gradient(90deg,var(--accent),#4c1d95); cursor:pointer; font-weight:600; color:#fff; text-decoration:none; }
+
+.hamburger { display:none; cursor:pointer; }
+@media (max-width:800px) { .nav-links { display:none; } .hamburger { display:block; } }
+
+.hero { padding-top:90px; padding-bottom:40px; }
+.hero-grid { display:grid; grid-template-columns:1fr 380px; gap:28px; align-items:start; }
+@media(max-width:900px){ .hero-grid{grid-template-columns:1fr;} }
+
+.card, .project-card { background: var(--card); border-radius:var(--radius); padding:22px; box-shadow:0 6px 30px rgba(2,6,23,0.6); }
+
+.avatar { width:100%; max-width:260px; border-radius:50%; display:block; object-fit:cover; }
+
+h1 { margin:6px 0 0; font-size:clamp(20px,3vw,34px); }
+p.lead { color:var(--muted); margin-top:8px; }
+
+.section-title { display:flex; align-items:center; gap:12px; margin-bottom:12px; }
+.chips { display:flex; gap:8px; flex-wrap:wrap; }
+.chip { background:rgba(0,0,0,0.05); padding:6px 10px; border-radius:999px; color:#fff; font-size:13px; font-weight:600; }
+
+/* Projects grid & cards size increase */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+.project-card {
+  padding: 28px;
+  min-height: 220px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 16px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.project-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.3);
+}
+
+/* Skills Section */
+.skill-bar { 
+  background: rgba(255,255,255,0.1);
+  border-radius:999px; 
+  padding:6px; 
+  margin-bottom:8px; 
+}
+.skill-fill { 
+  height:10px; 
+  border-radius:999px; 
+  width:0%; 
+  background: linear-gradient(90deg,#7c3aed,#2dd4bf); 
+  transition: width 1.2s ease-in-out; 
+}
+
+/* Contact form adjustments */
+#contact form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+#contact button {
+  padding: 12px 18px;
+  border-radius: 12px;
+  font-weight:600;
+  background: linear-gradient(90deg,#7c3aed,#2dd4bf);
+  color:#fff;
+  border:none;
+  cursor:pointer;
+  width:180px;
+  text-align:center;
+}
+#contact #formMsg {
+  margin-top:6px;
+  color:#4ade80; /* success message green */
+}
+
+form input, form textarea {
+  background:rgba(255,255,255,0.02); 
+  border:1px solid rgba(255,255,255,0.03); 
+  padding:10px; 
+  border-radius:8px; 
+  color:inherit; 
+}
+
+footer { margin-top:36px; padding:24px 0; color:var(--muted); text-align:center; }
+
+.flex { display:flex; gap:12px; align-items:center; flex-wrap:wrap; }
+.right { margin-left:auto; }
+.muted { color:var(--muted); }
+.grid-2 { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+
+/* Modal */
+.modal { display:none; position:fixed; z-index:100; padding-top:60px; left:0; top:0; width:100%; height:100%; overflow:auto; background-color: rgba(0,0,0,0.8); }
+.modal-content { margin:auto; display:block; max-width:80%; border-radius:8px; box-shadow:0 0 10px #000; animation: fadeIn 0.3s; }
+@keyframes fadeIn { from{opacity:0;} to{opacity:1;} }
+.close { position:absolute; top:20px; right:35px; color:#fff; font-size:40px; font-weight:bold; cursor:pointer; }
+
+/* Responsive tweaks */
+@media(max-width:1100px){ .projects-grid{grid-template-columns:repeat(2,1fr);} }
+@media(max-width:700px){ .projects-grid{grid-template-columns:1fr;} #contact button{width:100%;} }

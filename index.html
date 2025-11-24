@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Aarti Dhawre — Portfolio</title>
+  <meta name="description" content="Aarti Dhawre | BSc Computer Science student — Portfolio" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+
+<header>
+  <div class="container">
+    <nav>
+      <div class="brand">Aarti Dhawre</div>
+      <div class="nav-links">
+        <a href="#home">Home</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+        <a class="resume" href="resume/Aarti-Dhawre-Resume.pdf" target="_blank">Resume</a>
+      </div>
+      <div class="hamburger" id="hamburger">☰</div>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+  <section id="home" class="hero">
+    <div class="hero-grid">
+      <div>
+        <div class="card">
+          <h1>Hello, I'm <strong>Aarti Dhawre</strong></h1>
+          <p class="lead">BSc Computer Science student. Web developer learning full-stack development — HTML, CSS, JavaScript, PHP, MySQL. I build simple, accessible and responsive websites.</p>
+          <div class="flex" style="margin-top:16px;">
+            <a class="btn" href="#projects">See Projects</a>
+            <a class="btn" href="#contact" style="background:transparent;border:1px solid rgba(255,255,255,0.06)">Hire / Contact</a>
+          </div>
+          <div style="margin-top:18px">
+            <div class="section-title"><strong>Quick Links</strong></div>
+            <div class="chips">
+              <span class="chip">HTML</span>
+              <span class="chip">CSS</span>
+              <span class="chip">JavaScript</span>
+              <span class="chip">PHP</span>
+              <span class="chip">MySQL</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Projects Section -->
+        <section id="projects" style="margin-top:18px">
+          <div class="section-title"><h2>Projects</h2></div>
+          <div class="projects-grid" id="projectsGrid">
+
+            <div class="project-card card" style="background: rgba(255,255,255,0.1);">
+              <h3>UPSDM</h3>
+              <p class="muted">This project uses React, JavaScript, HTML, CSS.</p>
+              <img src="images/project1.jpg" alt="UPSDM Project" style="width:100%; border-radius:12px; margin:10px 0;">
+              <a class="btn" onclick="openModal('images/project1.jpg')">View Project</a>
+            </div>
+
+            <div class="project-card card" style="background: rgba(255,255,255,0.1);">
+              <h3>Calculator</h3>
+              <p class="muted">This project is built with HTML, CSS, JavaScript only.</p>
+              <img src="images/project2.jpg" alt="Calculator Project" style="width:100%; border-radius:12px; margin:10px 0;">
+              <a class="btn" onclick="openModal('images/project2.jpg')">View Project</a>
+            </div>
+
+            <div class="project-card card" style="background: rgba(255,255,255,0.1);">
+              <h3>Weather App</h3>
+              <p class="muted">This project is built with HTML, CSS, JavaScript only.</p>
+              <img src="images/project3.jpg" alt="Weather App Project" style="width:100%; border-radius:12px; margin:10px 0;">
+              <a class="btn" onclick="openModal('images/project3.jpg')">View Project</a>
+            </div>
+
+          </div>
+        </section>
+
+      </div>
+
+      <aside>
+        <div class="card">
+          <img class="avatar" src="images/aarti-photo.jpg" alt="Aarti Dhawre">
+          <h3>About Me</h3>
+          <p class="muted">BSc Computer Science student, passionate about coding and solving problems. Currently, I am focusing on strengthening my full-stack development skills and preparing myself for real-world projects and internship.</p>
+
+          <div style="margin-top:14px">
+            <div class="section-title"><strong>Contact</strong></div>
+            <div class="muted">Email: <a href="mailto:aartidhawre70@gmail.com">aartidhawre70@gmail.com</a></div>
+            <div class="muted">GitHub: <a href="https://github.com/AartiDhawre" target="_blank">github.com/AartiDhawre</a></div>
+            <div class="muted">LinkedIn: <a href="https://linkedin.com/in/aarti-dhawre-325604398" target="_blank">linkedin.com/in/aarti-dhawre-325604398</a></div>
+          </div>
+
+          <div style="margin-top:14px" class="flex">
+            <a class="resume" href="resume/Aarti-Dhawre-Resume.pdf" download>Download Resume</a>
+            <a class="resume right" href="resume/Aarti-Dhawre-Resume.pdf" target="_blank">View Resume</a>
+          </div>
+        </div>
+
+        <div style="margin-top:14px" class="card">
+          <h4>Education</h4>
+          <p class="muted" style="margin:6px 0 0">BSc Computer Science — Govt Holkar Science College</p>
+          <p class="muted" style="font-size:13px;margin-top:6px">Expected Graduation: 2026</p>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills">
+    <div class="section-title"><h2>Skills</h2></div>
+    <div class="card">
+      <div class="grid-2">
+        <div>
+          <p class="muted">HTML</p>
+          <div class="skill-bar"><div class="skill-fill" data-strength="95"></div></div>
+          <p class="muted">CSS</p>
+          <div class="skill-bar"><div class="skill-fill" data-strength="90"></div></div>
+          <p class="muted">JavaScript</p>
+          <div class="skill-bar"><div class="skill-fill" data-strength="85"></div></div>
+        </div>
+        <div>
+          <p class="muted">PHP</p>
+          <div class="skill-bar"><div class="skill-fill" data-strength="75"></div></div>
+          <p class="muted">MySQL</p>
+          <div class="skill-bar"><div class="skill-fill" data-strength="70"></div></div>
+          <p class="muted">Java</p>
+          <div class="skill-bar"><div class="skill-fill" data-strength="65"></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <div class="section-title"><h2>Contact Me</h2></div>
+    <div class="card">
+      <form id="contactForm">
+        <input type="text" id="name" placeholder="Your name" required />
+        <input type="email" id="email" placeholder="Your email" required />
+        <textarea id="message" rows="5" placeholder="Message" required></textarea>
+        <div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap">
+          <button type="submit">Send Message</button>
+          <div id="formMsg" class="muted" style="font-size:14px"></div>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <div class="muted">© <span id="year"></span> Aarti Dhawre • Built with HTML, CSS & JavaScript</div>
+  </footer>
+
+</main>
+
+<!-- Project Modal -->
+<div id="projectModal" class="modal">
+  <span class="close" onclick="closeModal()">&times;</span>
+  <img class="modal-content" id="modalImage">
+</div>
+
+<script src="script.js"></script>
+<script>
+function openModal(src){
+  const modal = document.getElementById('projectModal');
+  const modalImg = document.getElementById('modalImage');
+  modal.style.display = 'block';
+  modalImg.src = src;
+}
+function closeModal(){
+  document.getElementById('projectModal').style.display = 'none';
+}
+</script>
+</body>
+</html>
